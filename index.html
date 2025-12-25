@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" class="company-logo">
+                <img src="ASSETS/news-logo.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                     <li class="hover-link nav-item" onclick="reload()" id="news" onclick="onNavItemClick('news')">Home</li>
+                    <li class="hover-link nav-item" id="sport" onclick="onNavItemClick('sport')">Sport</li>
+                    <li class="hover-link nav-item" id="politics"onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="finance"onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="nature" onclick="onNavItemClick('nature')">Nature</li>
+                    <li class="hover-link nav-item" id="weather"onclick="onNavItemClick('weather')">Weather</li>
+                    <li class="hover-link nav-item" id="arts"onclick="onNavItemClick('arts')">Arts</li>
+                     <li class="hover-link nav-item" id="bussiness" onclick="onNavItemClick('bussiness')">Bussiness</li>
+                    <li class="hover-link nav-item" id="innovation"onclick="onNavItemClick('innovation')">Innovation</li>
+                    <li class="hover-link nav-item" id="travel"onclick="onNavItemClick('travel')">Travel</li>
+                    <li class="hover-link nav-item" id="documentaries" onclick="onNavItemClick('documentaries')">Documentaries</li>
+                  
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+           
+        </div>
+         <div class="pagination">
+        <button id="prev-btn" disabled>← Previous</button>
+        <span id="page-number">Page 1</span>
+        <button id="next-btn">Next →</button>
+    </div>
+    </main>
+    <template id="template-news-card">
+         <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200"
+                        alt="news-image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">
+                        This is the Title
+                    </h3>
+                    <h6 class="news-source" id="news-source">
+                        End Gadget 26/08/2023
+                    </h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, ea itaque
+                        beatae sapiente corrupti dolorem doloremque labore! Quam eius voluptates inventore, unde
+                        impedit, consectetur quibusdam dolorem labore ipsam, tempora doloremque?
+                    </p>
+                </div>
+               <a id="read-more"
+       class="read-more"
+       target="_blank">
+       Read more →
+    </a>
+            </div>
+
+    </template>
+    
+
+    <script src="./script.js" defer></script>
+
+
+</body>
+
+</html>
